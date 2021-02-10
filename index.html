@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Goole</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,33 +16,42 @@
 
         <nav id="nav-bar">
 
-            <ul>
+            <ul id="nav-top">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Store</a></li>
                 <li> <a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
             </ul>
-            <img src="https://web.archive.org/web/20191201000239im_/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="a logo of google">
+            <a class="google-app" aria-label="Google apps" href="#" aria-expanded="false" role="button"
+                tabindex="0"><svg class="gb_Xe" focusable="false" viewBox="0 0 24 24">
+                    <path
+                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                    </path>
+                </svg></a>
         </nav>
+        <button class="btn-sign-in" type="button">Sign In</button>
 
     </header>
     <!--main-->
 
     <main>
-        <div id="main-container">
 
-            <img src="" alt="">
-            <form action="">
-                <label for="gsearch"></label>
-                <input type="search" id="gsearch" name="gsearch">
-                <label for="search-btn"></label>
-                <input type="submit" name="submit" id="search-btn" value="Google Search">
-                <label for="lucky-btn"></label>
-                <input type="submit" name="submit" id="lucky-btn" value="I'm Feelling Lucky">
-            </form>
+        <img src="https://web.archive.org/web/20191201000239im_/https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            alt="a logo of google">
 
+        <div class="search-container">
+            <div class="searchbar">
+                <label for="search-input" class="search-icon-wrapper">
+                    <div class="search-icon"></div>
+                </label>
+                <input type="text" class="search-input" id="search-input" placeholder="Search Google or type a URL">
+                <button class="search-microphone"></button>
+            </div>
         </div>
+        <button class="search-btn">Google Search</button>
+        <button class="lucky-btn">I'm Feelling Lucky</button>
 
+       
 
     </main>
     <!--footer-->
