@@ -1,20 +1,193 @@
+/* Clear formatting*/
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
 
 
 
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+a:hover,
+a:active {
+
+    text-decoration: underline;
+    opacity: .85;
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+
+
+/*-------header-section logo+ nav------*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'arial', sans-serif;
+}
+
+/*----------google app resized------------*/
+.gb_Xe {
+
+    width: 1.875rem;
+    opacity: .55;
+}
+.google-app{
+    text-decoration: none;
+    list-style: none;
+    background-color: brown;
+}
+.btn-sign-in {
+    color: #fff;
+    cursor: default;
+    text-decoration: none;
+    border: 1px solid #4285f4;
+
+    background: #4285f4;
+    font-weight: bold;
+    outline: none;
+    line-height: 28px;
+    display: inline-block;
+    
+    padding: 0 12px;
+    border-radius: 2px;
+
+}
+
+/*----------fix the header with flex---------------*/
+#nav-bar {
+
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    line-height: 24px;
+    outline: none;
+    height:6vh;
+}
+
+
+.nav-top-right-container {
+    display: flex;
+    border: 1px solid rgb(2, 45, 185);
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20rem;
+
+}
+
+.nav-top-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 9rem;
+}
+
+#nav-top-left {
+    display: flex;
+    border: 1px solid pink;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 9rem;
+
+
+}
+
+
+/*---------main-section--------*/
+main {
+    display: flex;
+    border: 1px solid black;
+    height: 50vh;
+    align-items: center;
+
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    /*this will not make your items strech*/
+
+    align-items: center;
+
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    /*fix the height*/
+
+    border: 1px solid red;
+}
+
+
+
+/*button lucky and search btn syles*/
+
+
+#search,
+#lucky {
+    display: inline-block;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+
+
+
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    background-color: #f2f2f2;
+
+    color: #5F6368;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+
+    margin: 11px 4px;
+    padding: 0 16px;
+
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#search:hover,
+#lucky:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+    background-color: #f8f8f8;
+    /*
+    border: 1px solid #c6c6c6;
+    */
+    color: #222;
+    -webkit-appearance: none;
+
+}
 
 /* -----search-container styles----- */
 
 .search-container {
-    --searchbox-height: 44px;
+    height: 44px;
     margin: 0 auto 0 auto;
     min-width: 410px;
     width: var(--content-width);
-  }
-  
-  
-  /* -----searchbar styles----- */
-  
-  .searchbar {
+}
+
+
+/* -----searchbar styles----- */
+
+.searchbar {
     background: white;
     cursor: text;
     margin: 0 auto;
@@ -25,12 +198,12 @@
     font-size: 16px;
     height: var(--searchbox-height);
     position: relative;
-  }
-  
-  
-  /* -----search-input styles----- */
-  
-  .search-input {
+}
+
+
+/* -----search-input styles----- */
+
+.search-input {
     box-sizing: border-box;
     margin: 0;
     height: 100%;
@@ -46,25 +219,26 @@
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-  }
-  
-  .search-input:focus {
+}
+
+.search-input:focus {
     outline: transparent;
-  }
-  
-  .search-input:focus::placeholder {
+}
+
+.search-input:focus::placeholder {
     color: transparent;
-  }
-  
-  
-  /* -----search-icon styles---- */
-  
-  .search-icon-wrapper {
+}
+
+
+
+/* -----search-icon styles---- */
+
+.search-icon-wrapper {
     padding: 0 24px;
     /* margin-right: 48px; */
-  }
-  
-  .search-icon {
+}
+
+.search-icon {
     -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzVGNjM2OCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -76,12 +250,12 @@
     position: absolute;
     top: 0;
     width: 24px;
-  }
-  
-  
-  /* -----search-microphone styles----- */
-  
-  .search-microphone {
+}
+
+
+/* -----search-microphone styles----- */
+
+.search-microphone {
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjxwYXRoIGZpbGw9IiM0Mjg1RjQiIGQ9Ik0xMiAxNWMxLjY2IDAgMi45OS0xLjM0IDIuOTktM0wxNSA1YzAtMS42Ni0xLjM0LTMtMy0zUzkgMy4zNCA5IDV2N2MwIDEuNjYgMS4zNCAzIDMgM3oiLz48cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTEgMTguOTJoMlYyMmgtMnoiLz48cGF0aCBmaWxsPSIjRjRCNDAwIiBkPSJNNyAxMkg1YzAgMS45My43OCAzLjY4IDIuMDUgNC45NWwxLjQxLTEuNDFDNy41NiAxNC42MyA3IDEzLjM4IDcgMTJ6Ii8+PHBhdGggZmlsbD0iI0VBNDMzNSIgZD0iTTEyIDE3Yy0xLjM4IDAtMi42My0uNTYtMy41NC0xLjQ3bC0xLjQxIDEuNDFBNi45OSA2Ljk5IDAgMCAwIDEyLjAxIDE5YzMuODcgMCA2Ljk4LTMuMTQgNi45OC03aC0yYzAgMi43Ni0yLjIzIDUtNC45OSA1eiIvPjwvc3ZnPg==) no-repeat center;
     background-size: 21px 21px;
     bottom: 0;
@@ -93,4 +267,52 @@
     top: 0;
     width: 21px;
     border-color: transparent;
-  }
+}
+
+
+
+
+/*---------Footer-section---------*/
+footer {
+    position: absolute;
+    /*footer sticks at the bottom of the page*/
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    background-color:    #f2f2f2;
+    border:1px solid #e4e4e4;
+}
+
+footer a{
+    color: #5f6368;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:6vh;
+
+
+}
+
+
+#left-foot-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20rem;
+
+
+}
+
+
+#right-foot-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 13rem;
+
+
+
+}
